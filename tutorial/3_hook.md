@@ -17,14 +17,14 @@ import {
 
 const bodyElement = NElement.byElement(document.body);
 
-let dataObj = createHookObj({
+let dataObj = createHookObj({ // 创建hook对象
     key: "value",
 });
 
 bodyElement.addChild(NList.getElement([
-    bindValue(dataObj, "key")
+    bindValue(dataObj, "key") // 绑定到hook对象的值上
 ]));
 
-setInterval(() => { dataObj.key += "-"; }, 1500);
+setInterval(() => { dataObj.key += "-"; }, 1500); // 修改hook对象的值 绑定的值也会发生变化
 
 ```
